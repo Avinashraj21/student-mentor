@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require("dotenv").config()
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -11,7 +12,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://avinashselvi214:Avinashraj@21@mentorstudent.kd3fo.mongodb.net/?retryWrites=true&w=majority&appName=mentorstudent', {
+mongoose.connect(process.env.DB,
+     {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log("MongoDB connected"))
