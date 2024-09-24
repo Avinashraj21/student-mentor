@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mentor-student', {
+mongoose.connect('mongodb+srv://avinashselvi214:Avinashraj@21@mentorstudent.kd3fo.mongodb.net/?retryWrites=true&w=majority&appName=mentorstudent', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log("MongoDB connected"))
